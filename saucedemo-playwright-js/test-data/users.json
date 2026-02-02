@@ -1,0 +1,76 @@
+{
+  "validUsers": {
+    "standard": {
+      "username": "standard_user",
+      "password": "secret_sauce",
+      "description": "Standard user with full access"
+    },
+    "performance": {
+      "username": "performance_glitch_user",
+      "password": "secret_sauce",
+      "description": "User that simulates performance issues"
+    },
+    "problem": {
+      "username": "problem_user",
+      "password": "secret_sauce",
+      "description": "User with problem scenarios"
+    },
+    "visual": {
+      "username": "visual_user",
+      "password": "secret_sauce",
+      "description": "User for visual testing"
+    }
+  },
+  "invalidUsers": {
+    "lockedOut": {
+      "username": "locked_out_user",
+      "password": "secret_sauce",
+      "description": "User that is locked out"
+    },
+    "invalidCredentials": {
+      "username": "invalid_user",
+      "password": "invalid_password",
+      "description": "Non-existent user"
+    },
+    "emptyUsername": {
+      "username": "",
+      "password": "secret_sauce",
+      "description": "Empty username field"
+    },
+    "emptyPassword": {
+      "username": "standard_user",
+      "password": "",
+      "description": "Empty password field"
+    }
+  },
+  "checkoutInfo": {
+    "valid": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "postalCode": "12345"
+    },
+    "missingFirstName": {
+      "firstName": "",
+      "lastName": "Doe",
+      "postalCode": "12345"
+    },
+    "missingLastName": {
+      "firstName": "John",
+      "lastName": "",
+      "postalCode": "12345"
+    },
+    "missingPostalCode": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "postalCode": ""
+    }
+  },
+  "products": {
+    "backpack": "Sauce Labs Backpack",
+    "bikeLight": "Sauce Labs Bike Light",
+    "boltTshirt": "Sauce Labs Bolt T-Shirt",
+    "fleeceJacket": "Sauce Labs Fleece Jacket",
+    "onesie": "Sauce Labs Onesie",
+    "redTshirt": "Test.allTheThings() T-Shirt (Red)"
+  }
+}
