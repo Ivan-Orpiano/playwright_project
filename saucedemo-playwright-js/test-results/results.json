@@ -1,0 +1,204 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\playwright.config.js",
+    "rootDir": "C:/Users/ivanr/Projects/playwright-automation/saucedemo-playwright-js/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/ivanr/Projects/playwright-automation/saucedemo-playwright-js/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/ivanr/Projects/playwright-automation/saucedemo-playwright-js/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ivanr/Projects/playwright-automation/saucedemo-playwright-js/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/ivanr/Projects/playwright-automation/saucedemo-playwright-js/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/ivanr/Projects/playwright-automation/saucedemo-playwright-js/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/ivanr/Projects/playwright-automation/saucedemo-playwright-js/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "3way",
+    "version": "1.58.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "products\\products.spec.js",
+      "file": "products/products.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Products Page Functionality",
+          "file": "products/products.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should sort products by name Z to A",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12582,
+                      "error": {
+                        "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"product_sort_container\"]')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"product_sort_container\"]')\u001b[22m\n\n    at ProductsPage.selectOption (C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\pages\\BasePage.js:105:19)\n    at ProductsPage.sortProducts (C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\pages\\ProductsPage.js:84:16)\n    at C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\tests\\products\\products.spec.js:57:5",
+                        "location": {
+                          "file": "C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\pages\\BasePage.js",
+                          "column": 19,
+                          "line": 105
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\BasePage.js:105\n\n\u001b[0m \u001b[90m 103 |\u001b[39m \u001b[90m   */\u001b[39m\n \u001b[90m 104 |\u001b[39m   \u001b[36masync\u001b[39m selectOption(locator\u001b[33m,\u001b[39m value) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 105 |\u001b[39m     \u001b[36mawait\u001b[39m locator\u001b[33m.\u001b[39mselectOption(value)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 106 |\u001b[39m   }\n \u001b[90m 107 |\u001b[39m\n \u001b[90m 108 |\u001b[39m   \u001b[90m/**\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\pages\\BasePage.js",
+                            "column": 19,
+                            "line": 105
+                          },
+                          "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"product_sort_container\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\BasePage.js:105\n\n\u001b[0m \u001b[90m 103 |\u001b[39m \u001b[90m   */\u001b[39m\n \u001b[90m 104 |\u001b[39m   \u001b[36masync\u001b[39m selectOption(locator\u001b[33m,\u001b[39m value) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 105 |\u001b[39m     \u001b[36mawait\u001b[39m locator\u001b[33m.\u001b[39mselectOption(value)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 106 |\u001b[39m   }\n \u001b[90m 107 |\u001b[39m\n \u001b[90m 108 |\u001b[39m   \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[2m    at ProductsPage.selectOption (C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\pages\\BasePage.js:105:19)\u001b[22m\n\u001b[2m    at ProductsPage.sortProducts (C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\pages\\ProductsPage.js:84:16)\u001b[22m\n\u001b[2m    at C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\tests\\products\\products.spec.js:57:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-04T08:00:55.281Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\test-results\\products-products-Products-511c0-ort-products-by-name-Z-to-A-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\test-results\\products-products-Products-511c0-ort-products-by-name-Z-to-A-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\test-results\\products-products-Products-511c0-ort-products-by-name-Z-to-A-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\test-results\\products-products-Products-511c0-ort-products-by-name-Z-to-A-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\pages\\BasePage.js",
+                        "column": 19,
+                        "line": 105
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "37d1e523d2af92b2b9fb-65936ed48afb94f48949",
+              "file": "products/products.spec.js",
+              "line": 56,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-02-04T08:00:50.055Z",
+    "duration": 18525.53299999982,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
