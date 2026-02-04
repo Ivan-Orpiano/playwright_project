@@ -121,10 +121,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
+                      "workerIndex": 16,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 12582,
+                      "duration": 12096,
                       "error": {
                         "message": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"product_sort_container\"]')\u001b[22m\n",
                         "stack": "TimeoutError: locator.selectOption: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-test=\"product_sort_container\"]')\u001b[22m\n\n    at ProductsPage.selectOption (C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\pages\\BasePage.js:105:19)\n    at ProductsPage.sortProducts (C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\pages\\ProductsPage.js:84:16)\n    at C:\\Users\\ivanr\\Projects\\playwright-automation\\saucedemo-playwright-js\\tests\\products\\products.spec.js:57:5",
@@ -148,7 +148,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-02-04T08:00:55.281Z",
+                      "startTime": "2026-02-04T08:01:23.981Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -194,8 +194,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-04T08:00:50.055Z",
-    "duration": 18525.53299999982,
+    "startTime": "2026-02-04T08:01:18.405Z",
+    "duration": 18070.529000000097,
     "expected": 0,
     "skipped": 0,
     "unexpected": 1,
