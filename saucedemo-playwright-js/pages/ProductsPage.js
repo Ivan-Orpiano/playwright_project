@@ -1,5 +1,3 @@
-
-
 const BasePage = require('./BasePage');
 
 class ProductsPage extends BasePage {
@@ -76,11 +74,25 @@ class ProductsPage extends BasePage {
    * @param {string} sortOption - Sort option value (e.g., 'lohi', 'hilo', 'az', 'za')
    * 
    * Why string parameter: Makes tests more readable and matches actual dropdown values
+   * FIXED: Now waits for actual DOM changes instead of hard-coded timeout
    */
   async sortProducts(sortOption) {
+ 
+    const firstProductNameBefore = await this.inventoryItemNames.first().textContent();
+    
+   
     await this.selectOption(this.sortDropdown, sortOption);
-    // Small wait for UI to update after sorting
-    await this.page.waitForTimeout(500);
+    
+   
+    await this.page.waitForFunction(
+      ({ firstNameBefore, locator }) => {
+        const firstElement = document.querySelector(locator);
+        return firstElement && firstElement.textContent !== firstNameBefore;
+      },
+      { firstNameBefore: firstProductNameBefore, locator: '.inventory_item_name' },
+      { timeout: 5000 }
+    );
+     await this.page.waitForTimeout(100);
   }
 
   /**
@@ -99,8 +111,6 @@ class ProductsPage extends BasePage {
    * Dynamic locator based on product name makes it flexible
    */
   async addProductToCart(productName) {
-    // Find the add to cart button for specific product
-    // Using data-test attribute which follows pattern: add-to-cart-{product-name-lowercased-and-hyphenated}
     const productNameId = productName.toLowerCase().replace(/\s+/g, '-');
     const addButton = this.page.locator(`[data-test="add-to-cart-${productNameId}"]`);
     await this.click(addButton);

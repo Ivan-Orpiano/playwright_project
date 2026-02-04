@@ -199,7 +199,7 @@ test.describe('Shopping Cart Functionality', () => {
     await productsPage.goToCart();
     expect(await cartPage.getCartItemCount()).toBe(2);
   });
-
+   
   test('should get all product names from cart', async () => {
     const backpack = TestHelpers.getProduct('backpack');
     const bikeLight = TestHelpers.getProduct('bikeLight');

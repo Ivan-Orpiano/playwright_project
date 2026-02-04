@@ -130,7 +130,7 @@ test.describe('Products Page Functionality', () => {
     const numericPrice = TestHelpers.extractPrice(price);
     expect(numericPrice).toBeGreaterThan(0);
   });
-
+  
   test('should display product description', async () => {
     const backpackProduct = TestHelpers.getProduct('backpack');
     const description = await productsPage.getProductDescription(backpackProduct);
